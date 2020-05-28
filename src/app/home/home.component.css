@@ -1,0 +1,29 @@
+.mat-card {
+  margin-bottom: 14px;
+}
+
+/* Hang */
+@keyframes hang {
+	50% {
+		transform: translateY(3px);
+	}
+
+	100% {
+		transform: translateY(6px);
+	}
+}
+
+.hang {
+	display: inline-block;
+	transition-duration: .5s;
+	transition-property: transform;
+}
+.hang:hover{
+  transform: translateY(6px);
+  animation-name: hang;
+  animation-duration: 1.5s;
+  animation-delay: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

@@ -1,0 +1,49 @@
+<section>
+  <h1 style="text-align: center;">Welcome to Project <span style="background-color: #6ac045; padding: 5px;">Hub</span></h1>
+</section>
+<mat-divider></mat-divider>
+
+<section>
+
+  <div>
+    <h1>CSE - IT Engineering Projects</h1>
+  </div>
+  <div fxLayout="row wrap" fxLayout.sm="column" fxLayoutGap.lg="20px grid" fxLayoutAlign="space-around center">
+    <div *ngFor="let technology of commonTechnologies" fxFlex.lg="calc(25%-20px)">
+      <mat-card class="hang">
+        <mat-card-header color="accent">
+          <mat-card-title>{{technology.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="technologyImage[technology.name.toLowerCase()].image" style="height: 150px;">
+        <mat-card-actions align="center">
+          <button mat-raised-button color="accent" (click)="opencontactDialog()">Get Project</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+
+  <div>
+    <h1>Trending Technologies</h1>
+    <p>We also have projects on following technology</p>
+  </div>
+  <div fxLayout="row wrap" fxLayout.sm="column" fxLayoutGap.lg="20px grid" fxLayoutAlign="space-around center">
+    <div *ngFor="let technology of trendingTechnologies" fxFlex.lg="calc(25%-20px)">
+      <mat-card class="hang">
+        <img mat-card-image [src]="technologyImage[technology.name.toLowerCase()].image" style="height: 150px;">
+        <mat-card-content>
+          <p>
+            {{technology.Description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="center">
+          <button mat-raised-button color="accent" (click)="opencontactDialog()">Get Project</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
