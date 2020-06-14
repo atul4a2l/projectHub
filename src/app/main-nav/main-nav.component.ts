@@ -14,17 +14,17 @@ export class MainNavComponent {
       name: 'Home',
       route: '/home',
       icon: 'home'
-    },
-    {
-      name: 'Projects',
-      route: '/projects',
-      icon: 'library_books'
-    },
-    {
-      name: 'Contact us',
-      route: '/contact',
-      icon: 'contacts'
     }
+    // {
+    //   name: 'Projects',
+    //   route: '/projects',
+    //   icon: 'library_books'
+    // },
+    // {
+    //   name: 'Contact us',
+    //   route: '/contact',
+    //   icon: 'contacts'
+    // }
   ]
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

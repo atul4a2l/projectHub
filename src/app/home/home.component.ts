@@ -58,7 +58,6 @@ export class HomeComponent implements OnInit {
     });
 
     contactDialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
     });
   }
 
